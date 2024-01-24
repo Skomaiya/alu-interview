@@ -10,7 +10,7 @@
 
 
 def rain(walls):
-    water_retained = 0
+    water_remained = 0
     
     if not walls:
         return 0
