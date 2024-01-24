@@ -8,6 +8,7 @@
     it rains.
 """
 
+
 def calculate_water_consumptions(list, n):
     max_size = 0
 
@@ -21,7 +22,7 @@ def calculate_water_consumptions(list, n):
             right_max = list[i]
         for j in range(i + 1, n):
             right_max = max(right_max, list[j])
-        max_size = max_size + (min(left_max, right_max))
+        max_size = max_size + (min(left_max, right_max) - list[j])
     return max_size
 
 
