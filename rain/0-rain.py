@@ -12,7 +12,7 @@
 def calculate_water_consumptions(list, n):
     max_size = 0
 
-    if not wall:
+    if not walls:
         return 0
 
     for i in range(1, n-1):
