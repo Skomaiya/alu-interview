@@ -26,5 +26,5 @@ def calculate_water_consumptions(list, n):
 
 
 def rain(walls):
-    water_remained = calculate_water_consuptions(walls, len(walls))
+    water_remained = calculate_water_consumptions(walls, len(walls))
     return water_remained
