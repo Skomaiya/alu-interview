@@ -9,23 +9,26 @@
 """
 
 
-def calculate_water_consumptions(list, n):
-    max_size = 0
-
+def rain(walls):
+    water_retained = 0
+    
     if not walls:
         return 0
 
-    for i in range(1, n-1):
-        left_max = list[i]
-        for j in range(i):
-            left_max = max(left_max, list[j])
-            right_max = list[i]
-        for j in range(i + 1, n):
-            right_max = max(right_max, list[j])
-        max_size = max_size + (min(left_max, right_max) - list[j])
-    return max_size
+    n = len(walls)
+    
+    left_max = [0] * n
+    right_max = [0] * n
 
+    left_max[0] = walls[0]
+    for i in range(1, n):
+        left_max[i] = max(left_max[i - 1], walls[i])
 
-def rain(walls):
-    water_remained = calculate_water_consumptions(walls, len(walls))
+    right_max[n - 1] = walls[n - 1]
+    for i in range(n - 2, -1, -1):
+        right_max[i] = max(right_max[i + 1], walls[i])
+
+    for i in range(n):
+        water_remained += max(0, min(left_max[i], right_max[i]) - walls[i])
+
     return water_remained
