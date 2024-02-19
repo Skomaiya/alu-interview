@@ -2,6 +2,8 @@
 """
 This returns a set of numbers that represent the Pascal Triangle
 """
+
+
   if n <= 0:
         return []
 
@@ -20,6 +22,7 @@ def print_triangle(triangle):
     """
     Print the triangle
     """
+
     for row in triangle:
         print("[{}]".format(",".join([str(x) for x in row])))
 
