@@ -1,4 +1,7 @@
-
+#!/usr/bin/python3
+"""
+This function looks to return a set a numbers that represent the Pascal Triangle
+"""
 def pascal_triangle(n):
     """
     Generates Pascal's triangle up to the nth row.
