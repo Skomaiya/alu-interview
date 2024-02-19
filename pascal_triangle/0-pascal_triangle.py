@@ -16,6 +16,3 @@ def pascal_triangle(n):
     # Print the triangle for testing
     for row in triangle:
         print(row)
-
-# Example usage:
-pascal_triangle(7)
