@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This function looks to return a set a numbers that represent the Pascal Triangle
+This returns a set of numbers that represent the Pascal Triangle
 """
 
 
