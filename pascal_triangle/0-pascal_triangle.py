@@ -2,6 +2,8 @@
 """
 This function looks to return a set a numbers that represent the Pascal Triangle
 """
+
+
 def pascal_triangle(n):
     if n <= 0:
         return []
